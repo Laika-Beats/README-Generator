@@ -1,6 +1,10 @@
 README Generator (Version 1.0)
 
-Creates a command-line application that dynamically generates a professional README.md from a user's input using Inquirer.
+Creates a command-line application that dynamically generates a professional README.md from a user's input using Inquirer. This README was generated with the program.
+
+Repository: https://github.com/Laika-Beats/README-Generator
+Demo Video (Downlaod to view): https://github.com/Laika-Beats/README-Generator/blob/master/README%20Generator%20Screen%20Recording%20.mov
+
 
 1. Installation
 2. Usage
