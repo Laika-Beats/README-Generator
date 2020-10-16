@@ -1,6 +1,6 @@
 const inquirer = require("inquirer") //connects the inquirer library for use in this file
 const fs = require("fs") //connects the fs library 
-const utils = require("utils") //connects the utils library
+const utils = require("util") //connects the utils library
 
 //prompts for user input/choice that will be written to README file
 inquirer.prompt([
@@ -41,6 +41,34 @@ inquirer.prompt([
         message: "What is your e-mail? "
     },
 ])
+.then(function(answer){
+    fs.appendFile("README.md", answer.title + "\n" + "\n", function(err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("Success!");
+    });
+    fs.appendFile("README.md", answer.description + "\n" + "\n", function(err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("Success!");
+    });
+    var tableOfContents = "1. Usage" + "\n" + "2. License" + "\n" + "3. Contributing" + "\n" + "4. Questions";
+    if (answer.tableContents === true){
+        fs.appendFile("README.md", tableOfContents + "\n" + "\n", function(err) {
+            if (err) {
+              return console.log(err);
+            }
+            console.log("Success!");
+        });
+    } else {
+        console.log("No Table of Contents")
+    };
+})
+
+
+
 
 
 
