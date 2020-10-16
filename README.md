@@ -1,31 +1,28 @@
-README Generator (Version 1.0)
+AAAAAAA
 
-Creates a command-line application that dynamically generates a professional README.md from a user's input using Inquirer.
+BBBBBB
 
 1. Installation
 2. Usage
 3. Contact
 4. License
-5. Contributing
 
 
 1. Installation:
-A.) Clone README Generator repository. 
-B.) Open repository in integrated terminal.
-C.) Type "npm init -y" and then "npm install inquirer"
+CCCCCCCC
 
 2. Usage:
-A.) Type "node index.js" in integrated terminal after installation.  
-B.) README.md will be generated in folder with the index.js. 
-C.) Move README.md out of the folder so it isn't overwritten on next use of this program.
+DDDDDDDD
 
 3. Contact:
-E-mail: laikabeatsdenver@gmail.com
-GitHub Username: Laika-Beats
+E-mail: FFFFFF
+GitHub Username: EEEEEE
 
 4. License:
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Copyright (c) 2020, Joshua E. Thompson
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
-5. Contributing:
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
