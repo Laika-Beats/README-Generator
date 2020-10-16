@@ -17,7 +17,12 @@ inquirer.prompt([
     {
         name: "tableContents",
         type: "confirm",
-        message: "Do you want a Table of Contents (y/n)? "
+        message: "Do you want a Table of Contents? "
+    },
+    {
+        name: "install",
+        type: "input",
+        message: "Provide instructions for installation: "
     },
     {
         name: "usage",
@@ -46,30 +51,41 @@ inquirer.prompt([
         if (err) {
           return console.log(err);
         }
-        console.log("Success!");
     });
     fs.appendFileSync("README.md", answer.description + "\n" + "\n", function(err) {
         if (err) {
           return console.log(err);
         }
-        console.log("Success!");
     });
-    var tableOfContents = "1. Usage" + "\n" + "2. License" + "\n" + "3. Contributing" + "\n" + "4. Questions";
+    var tableOfContents = "1. Installation" + "\n" + "2. Usage" + "\n"  + "3. Contact" + "\n" + "4. License";
     if (answer.tableContents === true){
         fs.appendFileSync("README.md", tableOfContents + "\n" + "\n" + "\n", function(err) {
             if (err) {
               return console.log(err);
             }
-            console.log("Success!");
         });
     } else {
         console.log("No Table of Contents")
     };
-    fs.appendFileSync("README.md", "1. Usage:" + "\n" + answer.usage + "\n" + "\n", function(err) {
+    fs.appendFileSync("README.md", "1. Installation:" + "\n" + answer.install + "\n" + "\n", function(err) {
         if (err) {
           return console.log(err);
         }
-        console.log("Success!");
+    });
+    fs.appendFileSync("README.md", "2. Usage:" + "\n" + answer.usage + "\n" + "\n", function(err) {
+        if (err) {
+          return console.log(err);
+        }
+    });
+    fs.appendFileSync("README.md", "3. Contact:" + "\n" + "E-mail: " + answer.email + "\n", function(err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
+    fs.appendFileSync("README.md", "GitHub Username: " + answer.username + "\n" + "\n", function(err) {
+        if (err) {
+            return console.log(err);
+        }
     });
     if (answer.license === "BSD"){
         var bsdLicense = "Copyright (c) 2020, Joshua E. Thompson" + "\n" +
@@ -78,11 +94,10 @@ inquirer.prompt([
         "2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution." + "\n" + "\n" +
         
         "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-        fs.appendFileSync("README.md", "2. License:" + "\n" + bsdLicense + "\n" + "\n", function(err) {
+        fs.appendFileSync("README.md", "4. License:" + "\n" + bsdLicense + "\n" + "\n", function(err) {
             if (err) {
               return console.log(err);
             }
-            console.log("Success!");
         });
 
     }
@@ -94,50 +109,20 @@ inquirer.prompt([
         "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software." + "\n" +
         
         "THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
-        fs.appendFileSync("README.md", "2. License:" + "\n" + mitLicense + "\n" + "\n", function(err) {
+        fs.appendFileSync("README.md", "4. License:" + "\n" + mitLicense + "\n" + "\n", function(err) {
             if (err) {
               return console.log(err);
             }
-            console.log("Success!");
         });
     }
     if (answer.license === "GPL") {
         var gplLicense = "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version." + "\n" +
         "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>."
-        fs.appendFileSync("README.md", "2. License:" + "\n" + gplLicense + "\n" + "\n", function(err) {
+        fs.appendFileSync("README.md", "4. License:" + "\n" + gplLicense + "\n" + "\n", function(err) {
             if (err) {
               return console.log(err);
             }
-            console.log("Success!");
         });  
     }
-    console.log("Success!")
+    console.log("Success! Writing README...")
 })
-
-
-        
-
-
-
-
-
-
-
-
-
-// array of questions for user
-const questions = [
-
-];
-
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
-init();
